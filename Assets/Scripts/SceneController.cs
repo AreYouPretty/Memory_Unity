@@ -68,5 +68,15 @@ public class SceneController : MonoBehaviour
     }
 
     public void CardRevealed(MemoryCard card)
-    {}
+    {
+        if (_firstRevealed == null)
+        {
+            _firstRevealed = card;
+        }
+        else
+        {
+            _secondRevealed = card;
+            Debug.Log("Match?" + (_firstRevealed.id == _secondRevealed.id));
+        }
+    }
 }
