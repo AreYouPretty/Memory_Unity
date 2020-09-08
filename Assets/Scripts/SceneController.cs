@@ -13,6 +13,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] private Sprite[] images;
 
     private int _id;
+    private MemoryCard _firstRevealed;
+    private MemoryCard _secondRevealed;
 
     void Start()
     {
@@ -59,4 +61,12 @@ public class SceneController : MonoBehaviour
 
         return newArray;
     }
+
+    public bool canReveal
+    {
+        get { return _secondRevealed == null; }
+    }
+
+    public void CardRevealed(MemoryCard card)
+    {}
 }
