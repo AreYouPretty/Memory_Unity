@@ -16,7 +16,6 @@ public class MemoryCard : MonoBehaviour
     }
 
     private int _id;
-
     public int id
     {
         get { return _id; }
